@@ -28,9 +28,12 @@ public class MainClass {
         else System.out.println("Мы еще раз проверили, оно точно отрицательное");
 //        System.out.println("Мы забыли познакомиться. Напишите, как вас зовут:");
 ////        String name=scanner.nextLine();
-////        helloUser(name);
+////        helloUser(name); - я не понимаю, почему этот кусок кода со сканнером не работает!
         String name = "Вася";
         helloUser(name);
+        System.out.println("введите год для проверки");
+        int year=scanner.nextInt();
+        yearCheck(year);
     }
 
     public static double calculate(double a, double b, double c, double d) {
@@ -60,5 +63,17 @@ public class MainClass {
     }
     public static void helloUser (String a) {
         System.out.println("HelLo, "+a);
+    }
+    public static void yearCheck (int a) {
+//        int check1 = a%4;
+//        int check2 = a%100;
+//        int check3 = a%400;
+        boolean check4;
+        if (a%100==0&&a%400!=0)
+            check4 = true;
+        else check4=false;
+        if (a%4!=0 || check4==true)
+            System.out.println("Год не високосный");
+        else System.out.println("Год високосный");
     }
 }
