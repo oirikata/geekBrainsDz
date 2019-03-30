@@ -26,6 +26,11 @@ public class MainClass {
         ifNumberAboveZero(number1);
         if (ifNumberBelowZero(number1)==false) System.out.println("Мы еще раз проверили, оно точно положительное");
         else System.out.println("Мы еще раз проверили, оно точно отрицательное");
+//        System.out.println("Мы забыли познакомиться. Напишите, как вас зовут:");
+////        String name=scanner.nextLine();
+////        helloUser(name);
+        String name = "Вася";
+        helloUser(name);
     }
 
     public static double calculate(double a, double b, double c, double d) {
@@ -52,5 +57,8 @@ public class MainClass {
         if (a>=0) result=false;
         else result=true;
         return result;
+    }
+    public static void helloUser (String a) {
+        System.out.println("HelLo, "+a);
     }
 }
