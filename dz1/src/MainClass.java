@@ -24,6 +24,8 @@ public class MainClass {
         System.out.println("введите первое число для проверки положительное оно или отрицательное");
         int number1=scanner.nextInt();
         ifNumberAboveZero(number1);
+        if (ifNumberBelowZero(number1)==false) System.out.println("Мы еще раз проверили, оно точно положительное");
+        else System.out.println("Мы еще раз проверили, оно точно отрицательное");
     }
 
     public static double calculate(double a, double b, double c, double d) {
@@ -44,5 +46,11 @@ public class MainClass {
         if (result==true) System.out.println("Введенное число положительное");
         else System.out.println("Введенное число отрицательное");
 
+    }
+    public static boolean ifNumberBelowZero (int a) {
+        boolean result;
+        if (a>=0) result=false;
+        else result=true;
+        return result;
     }
 }
